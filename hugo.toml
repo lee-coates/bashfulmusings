@@ -1,0 +1,4 @@
+baseURL = 'https://bashfulmusings.dev'
+languageCode = 'en-us'
+title = 'Bashful Musings'
+theme = 'hugo-theme-stack'
