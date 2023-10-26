@@ -2,7 +2,6 @@
 categories = ['Database']
 title = 'History of Database Systems'
 date = 2023-10-25
-draft = true
 +++
 
 ## History of Database Systems
