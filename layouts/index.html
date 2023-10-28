@@ -1,0 +1,21 @@
+{{ define "main" }}
+    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+    {{ $filtered := ($pages | intersect $notHidden) }}
+    {{ $pag := .Paginate ($filtered) }}
+
+    <h1>Welcome to Bashful Musings!</h1>
+    <p>a bash-friendly tech blog about open source</p>
+
+    <h3>Recent Posts</h3>
+    <a href="https://bashfulmusings.dev/posts/history-of-databases-systems/")>History of Database Systems</a>
+
+    <h3><a href="https://bashfulmusings.dev/posts/">All Posts</a></h3>
+    
+    {{- partial "pagination.html" . -}}
+    {{- partial "footer/footer" . -}}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}
