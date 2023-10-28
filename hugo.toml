@@ -1,4 +1,6 @@
 baseURL = 'https://bashfulmusings.dev'
 languageCode = 'en-us'
 title = 'Bashful Musings'
-theme = 'hugo-theme-stack'
+
+[[module.imports]]
+path = "github.com/CaiJimmy/hugo-theme-stack/v3"
