@@ -1,6 +1,27 @@
 baseURL = 'https://bashfulmusings.dev'
 languageCode = 'en-us'
 title = 'Bashful Musings'
+description = 'a bash-friendly tech blog about open source'
+mainSections = ['post']
+favicon = 'favicon.ico'
+
+[params.sidebar]
+subtitle = 'a bash-friendly tech blog about open source'
 
 [[module.imports]]
 path = "github.com/CaiJimmy/hugo-theme-stack/v3"
+
+
+[menu]
+    [[menu.main]]
+        name = 'Home'
+        weight = 1
+        pageRef = '/'
+        [[menu.main.params]]
+            icon = 'home'
+    [[menu.main]]
+        name = 'Posts'
+        weight = 2
+        pageRef = '/posts/'
+        [[menu.main.params]]
+            icon = 'archives'
