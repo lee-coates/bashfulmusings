@@ -22,6 +22,6 @@ path = "github.com/CaiJimmy/hugo-theme-stack/v3"
     [[menu.main]]
         name = 'Posts'
         weight = 2
-        pageRef = '/posts/'
+        pageRef = '/post'
         [[menu.main.params]]
             icon = 'archives'
