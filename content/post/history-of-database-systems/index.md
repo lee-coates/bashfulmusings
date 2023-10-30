@@ -1,4 +1,5 @@
 +++
+url = '/posts/history-of-database-systems/'
 categories = ['Database']
 title = 'History of Database Systems'
 date = 2023-10-25
