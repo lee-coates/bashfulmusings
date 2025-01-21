@@ -57,6 +57,15 @@ By looking at my theme's templating code, I could see that it was expecting my p
 
 Finally, serve the draft content, test, commit, push, pull request, 🎶
 
+## Notes on Hosting
+Because our browsers have everything they need to display html, css, and javascript, no backend server that facilitates web traffic is needed to host a static site like Hugo. The browser just needs the address of the files and then it can make all functionality available to the user. GitHub enables free hosting for public repositories and has a feature called GitHub Actions to help orchestrate loading the correct files onto their content delivery system. This continuous deployment solution makes it possible to have your public files updated automatically on some trigger, preferably a Pull Request. This helps ensure the public files match what is on the deployment branch and that these files pass quality checks prior to making it to the cdn. GitHub Actions has evolved over the years, but the simplest solution is to create a .github/workflows/hugo.yaml file. This file tells GitHub Actions what to do. For example, this repos hugo.yaml file:
+- defines a trigger on a push to main (which is secured to require a reviewed pull request) 
+- sets up an Ubuntu VM to install Hugo dependencies
+- builds the site
+- loads the contents of the public folder onto GitHub Pages. 
+
+GitHub has a friendly GUI to create this file when you configure GitHub Actions through their website.
+
 ## More Site Configs
 The last setup related item is the menu, which I decided to define in hugo.toml
 ```
