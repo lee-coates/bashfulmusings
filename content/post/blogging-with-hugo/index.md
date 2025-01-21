@@ -36,7 +36,7 @@ title = 'Bashful Musings'
 path = "github.com/CaiJimmy/hugo-theme-stack/v3"
 ```
 
-In the above toml config file, the theme is defined using Hugo modules. [Hugo modules](https://gohugo.io/hugo-modules/) naturally build on Go's dependency management system to piece together code from several projects; a theme component is the most basic use case for Hugo Modules since its code from someone else's repo ([hugo-theme-stack](https://github.com/CaiJimmy/hugo-theme-stack) in my case).
+In the above toml config file, the theme is defined using Hugo modules. [Hugo modules](https://gohugo.io/hugo-modules/) naturally build on Go's dependency management system to piece together code from several projects; a theme component is the most basic use case for Hugo Modules since it uses code from someone else's repo ([hugo-theme-stack](https://github.com/CaiJimmy/hugo-theme-stack) in my case).
 
 ```
 hugo mod init bashfulmusings.dev
